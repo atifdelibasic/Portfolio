@@ -1,0 +1,38 @@
+let header = document.querySelector("header");
+let hamburger = document.querySelector(".menu-btn");
+let overlay = document.querySelector(".overlay");
+let menu_items = document.querySelectorAll(".menu-item");
+
+const ToggleMenu = () => {
+  let x = document.querySelector("#menuId");
+  if (x.className === "menu") {
+    x.className += " responsive";
+    hamburger.classList.add('open');
+  } else {
+    x.className = "menu";
+    hamburger.classList.remove('open');
+
+  }
+};
+
+hamburger.addEventListener("click", ToggleMenu);
+
+// ul list items
+menu_items.forEach((el) => {
+  el.addEventListener("click", ToggleMenu);
+});
+
+// set opacity on scroll
+const setOpacity = () => {
+  let offsetY = window.pageYOffset;
+  if (offsetY) {
+    header.style.opacity = 0.95;
+    header.style.padding = "0em";
+  } else {
+    header.style.opacity = 1;
+    header.style.padding = "0.94em 0";
+  }
+};
+
+// add scroll event on header
+window.addEventListener("scroll", setOpacity);
