@@ -418,7 +418,11 @@ textarea {
   }
 
   .header-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
+  }
+
+  .header-description {
+    font-size: 1.5rem;
   }
 
   .menu-item {
@@ -456,6 +460,10 @@ textarea {
     width: 100%;
   }
 
+  .contact-myinfo {
+    height: 100vh;
+  }
+
   .contact-form {
     padding: 2em;
   }
@@ -483,9 +491,6 @@ textarea {
     width: 90%;
   }
 
-  .about-text-description {
-    font-size: 1.4rem;
-  }
   .responsive {
     position: fixed;
     top: 0;
