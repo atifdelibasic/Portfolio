@@ -36,3 +36,11 @@ const setOpacity = () => {
 
 // add scroll event on header
 window.addEventListener("scroll", setOpacity);
+
+
+let imgAvatar = document.querySelector(".section-avatar");
+
+imgAvatar.addEventListener("click", () => {
+  let a = document.querySelector(".img-avatar");
+  a.classList.toggle("avatar-2");
+});

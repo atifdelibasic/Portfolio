@@ -87,12 +87,23 @@ header {
 }
 
 .img-avatar {
-  background: url(./images/avataaars.svg) center;
-  background-size: contain;
+  /* background: url(./images/avataaars.svg) center; */
   background-repeat: no-repeat;
+  
+  transition: all 0.09s ease-in;
+  pointer-events: none;
   height: 200px;
   width: 200px;
-  transition: all 0.09s ease-in;
+}
+
+.avatar-2 {
+  background: url(./images/avatar.svg) center !important;
+  background-size: contain !important;
+}
+
+.avatar-1 {
+  background: url(./images/avataaars.svg) center;
+  background-size: contain;
 }
 
 .img-avatar:hover {
@@ -181,9 +192,10 @@ nav a:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url('./icons/working-code.jpg');
+  background: url("./icons/working-code.jpg");
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .about-main {
@@ -203,12 +215,12 @@ nav a:focus {
   padding: 0 0.2em 0.2em 0.2em;
   padding: 1em;
   margin-bottom: 1em;
-  background-color:   rgba(56, 56, 56, 0.6) ;
+  background-color: rgba(56, 56, 56, 0.6);
 }
 
 .about-text {
   padding: 1em;
-  background-color:   rgba(56, 56, 56, 0.6) ;
+  background-color: rgba(56, 56, 56, 0.6);
   color: #fff;
 }
 
@@ -220,7 +232,6 @@ nav a:focus {
   font-size: 1.1rem;
   border: 4px dotted #fff;
   padding: 1em;
-
 }
 
 .skills-section {
@@ -346,7 +357,6 @@ nav a:focus {
 
 .label-tag {
   padding: 0em 0 1em 0.2em;
-
 }
 
 .input-tag {
@@ -435,7 +445,6 @@ textarea {
   .header-title {
     font-size: 2.5rem;
   }
-
   .header-description {
     font-size: 1.5rem;
   }
@@ -540,6 +549,9 @@ textarea {
     padding: 0.6em 0;
     font-size: 1.4rem;
   }
+  .erase {
+    pointer-events: none;
+  }
 }
 @media (hover: hover) {
   .fas:hover,
@@ -553,10 +565,9 @@ textarea {
     background: #67c5ff;
   }
   .img-avatar:hover {
-
+    pointer-events: none;
   }
 }
-
 
 .arrow {
   position: absolute;
@@ -565,5 +576,5 @@ textarea {
   bottom: 10px;
   width: 100px;
   text-align: center;
-  color:#fff;
+  color: #fff;
 }
