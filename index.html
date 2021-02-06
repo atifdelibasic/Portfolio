@@ -192,8 +192,8 @@
 
         <div class="contact-input">
           <form
-            method="POST"
-            action="contactform.php"
+            method="GET"
+            action="mailto:atif.delibasic@edu.fit.ba"
             class="contact-form"
           >
             <h2>Send Me A Message</h2>
@@ -207,6 +207,8 @@
               />
             </div>
 
+            <input type="text"  name="subject" value="Portfolio contact" hidden>
+            
             <div class="form-item">
               <label class="label-tag">Email</label>
               <input
@@ -223,7 +225,7 @@
                 cols="30"
                 rows="5"
                 placeholder="Write me a message"
-                name="message"
+                name="body"
               ></textarea>
             </div>
 
