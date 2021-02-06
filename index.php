@@ -1,17 +1,248 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-if(isset($_POST['submit'])) {
-    $name = $_POST['fullname'];
-    $mailFrom = $_POST['email'];
-    $message = $_POST['message'];
+    <link rel="stylesheet" type="text/css" href="css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./icons/favicon.ico" />
+    <title>Atif Delibašić</title>
+  </head>
+  <body id="home">
+    <div class="wrapper">
+      <header>
+        <div class="container header-flex">
+          <div class="logo-section">
+            <div class="img-logo"></div>
+          </div>
+          <nav class="">
+            <ul class="menu" id="menuId">
+              <li class="menu-item"><a href="#home">Home</a></li>
+              <li class="menu-item"><a href="#about">About</a></li>
+              <li class="menu-item"><a href="#skills">Skills</a></li>
+              <li class="menu-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+          </div>
+        </div>
+      </header>
 
-    $mailTo="atif.delibasic@gmail.com";
-    $headers = "From: ".$mailFrom;
-    $txt = "You have received an e-mail from ".$name.".\n\n".$message;
+      <!-- <div class="overlay" style="display: none;"></div> -->
 
+      <div class="container container-flex">
+        <div class="section-avatar">
+          <div class="img-avatar background"></div>
+        </div>
+        <div class="main-header">
+          <h1 class="header-title">Junior Software Developer</h1>
+          <p class="header-description">
+            Hi. I'm Atif, a final year Information Technology student.
+          </p>
+        </div>
+        <div class="social-links">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/atif-delibasic/"
+            class="fab fa-linkedin"
+          ></a>
+          <a
+            target="_blank"
+            href="https://github.com/atifdelibasic"
+            class="fab fa-github"
+          ></a>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=100005770391677"
+            class="fab fa-facebook"
+          ></a>
+          <a
+            target="_blank"
+            href="mailto:atif.delibasic@gmail.com"
+            class="fas fa-at"
+          ></a>
+        </div>
+        <div class="cv-section">
+          <a target="_blank" href="./Curiculum Vitae//Atif Delibašić - CV.pdf"
+            ><input class="cv-btn btn" type="button" value="Open CV"
+          /></a>
+        </div>
+        <div class="learn-more">
+          <p class="learn-paragraph">Learn more about what I do</p>
+          <a href="#about"><i href="#about" class="fas fa-chevron-down"></i></a>
+        </div>
+      </div>
+    </div>
 
-    mail($mailTo, 'Nesto', $txt, $headers);
-    header("Location: index.php?mailsend");
-}
+    <div class="container">
+      <section id="about" class="about-section">
+        <main class="about-main">
+          <h2 class="about-title">About me</h2>
+          <div class="about-text">
+            <p class="about-text-description">
+              Hi there and nice to meet you!
+              <br />
+              Let me give you a brief about my programming experience. So, I
+              have been programming for more than two years now. High school
+              years, where we wrote some simple Pascal code, are not included. I
+              am Final year of bachelor's studies at Faculty of information
+              technologies based in Mostar. Worked on many school assignments
+              and side projects.
+              <br />
+              <br />
+              <strong
+                >Checkout my CV, skills section or Github projects.</strong
+              >
+              <br />
+              <br />
+              <strong>Open for job offers or internships</strong>
+            </p>
+          </div>
+        </main>
+      </section>
 
-?>
+      <section id="skills" class="skills-section">
+        <div class="cards">
+          <div class="card card-frontend">
+            <img src="./icons/computer.png" alt="" />
+            <h3 class="card-title">Front-end</h3>
+            <p class="card-description">
+              Good knowledge of HTML and CSS. Focusing on learning React.js
+            </p>
+            <p class="card-subtitle">Tools:</p>
+            <p class="card-tools">Visual Studio Code</p>
+            <p class="card-subtitle">Skills:</p>
+            <ul class="card-skill-list">
+              <li class="skill-item">HTML</li>
+              <li class="skill-item">CSS</li>
+              <li class="skill-item">JavaScript</li>
+              <li class="skill-item">Bootstrap</li>
+              <li class="skill-item">React.js</li>
+            </ul>
+          </div>
+
+          <div class="card card-backend">
+            <img src="./icons/programming.png" alt="" />
+            <h3 class="card-title">Back-end</h3>
+            <p class="card-description">
+              Strong fundamentals in OOP. Focusing on learning ASP .NET Core
+            </p>
+            <p class="card-subtitle">Tools:</p>
+            <p class="card-tools">Visual Studio Code, Visual Studio</p>
+            <p class="card-subtitle">Skills:</p>
+            <ul class="card-skill-list">
+              <li class="skill-item">C ++</li>
+              <li class="skill-item">C #</li>
+              <li class="skill-item">Windows Forms</li>
+              <li class="skill-item">ASP .NET Core</li>
+              <li class="skill-item">Node.js + Express</li>
+            </ul>
+          </div>
+
+          <div class="card card-db">
+            <img src="./icons/server.png" alt="" />
+            <h3 class="card-title">Database</h3>
+            <p class="card-description">Familiar with both SQL and noSQL databases.</p>
+            <p class="card-subtitle">Tools:</p>
+            <p class="card-tools">Microsoft SQL Management Studio</p>
+
+            <p class="card-subtitle">Skills:</p>
+            <ul class="card-skill-list">
+              <li class="skill-item">SQLite</li>
+              <li class="skill-item">Microsoft SQL Server</li>
+              <li class="skill-item">MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" style="position: relative">
+        <div class="contact-myinfo">
+          <div class="contact contact-adress">
+            <div class="contact-title">
+              <i class="fa fa-globe" aria-hidden="true"></i>
+              <h3>Adress</h3>
+            </div>
+            <p class="contact-description">72240 Kakanj</p>
+          </div>
+
+          <div class="contact contact-phone">
+            <div class="contact-title">
+              <i class="fa fa-mobile"></i>
+              <h3>Phone</h3>
+            </div>
+            <p class="contact-description">+387 62 755 356</p>
+          </div>
+
+          <div class="contact contact-email">
+            <div class="contact-title">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <h3>Email</h3>
+            </div>
+            <p class="contact-description">atif.delibasic@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="contact-input">
+          <form
+            method="POST"
+            action="contactform.php"
+            class="contact-form"
+          >
+            <h2>Send Me A Message</h2>
+            <div class="form-item">
+              <label  class="label-tag">Full Name</label>
+              <input
+                type="text"
+                name="fullname"
+                placeholder="Enter Full Name"
+                class="input-tag"
+              />
+            </div>
+
+            <div class="form-item">
+              <label class="label-tag">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="input-tag"
+                placeholder="Enter e-mail"
+              />
+            </div>
+
+            <div class="form-item">
+              <label class="label-tag">Message</label>
+              <textarea
+                cols="30"
+                rows="5"
+                placeholder="Write me a message"
+                name="message"
+              ></textarea>
+            </div>
+
+            <div class="form-item">
+              <input
+                type="submit"
+                name="submit"
+                value="SEND MESSAGE"
+                class="submit-btn btn"
+              />
+            </div>
+          </form>
+        </div>
+        <a class="arrow" href="#home">
+          <i class="fas fa-chevron-up" style="color: #fff;"></i>
+          <p>Scroll to top</p>
+        </div>
+      </section>
+    </div>
+    <script src="./events.js"></script>
+  </body>
+</html>
