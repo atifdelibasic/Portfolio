@@ -235,6 +235,7 @@ nav a:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 .card:first-child {
@@ -333,12 +334,14 @@ nav a:focus {
 
 .label-tag {
   padding: 0em 0 1em 0.2em;
+
 }
 
 .input-tag {
   border-style: none;
   border-bottom: 1px solid rgb(184, 184, 184);
   padding: 0em 0 1em 0.4em;
+  outline: none;
 }
 
 textarea {
@@ -469,7 +472,7 @@ textarea {
   }
 
   .contact-input {
-    padding: 1em 0;
+    padding: 1em 0 5.5em 0;
   }
 
   .img-logo {
@@ -537,4 +540,18 @@ textarea {
     color: #fff;
     background: #67c5ff;
   }
+  .img-avatar:hover {
+
+  }
+}
+
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 10px;
+  width: 100px;
+  text-align: center;
+  color:#fff;
 }

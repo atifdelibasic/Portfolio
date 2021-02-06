@@ -11,7 +11,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>Atif</title>
+    <link rel="icon" href="./icons/favicon.ico" />
+    <title>Atif Delibašić</title>
   </head>
   <body id="home">
     <div class="wrapper">
@@ -142,17 +143,13 @@
               <li class="skill-item">Windows Forms</li>
               <li class="skill-item">ASP .NET Core</li>
               <li class="skill-item">Node.js + Express</li>
-              <li class="skill-item">REST API</li>
             </ul>
           </div>
 
           <div class="card card-db">
             <img src="./icons/server.png" alt="" />
             <h3 class="card-title">Database</h3>
-            <p class="card-description">
-              Familiar with both SQL and noSQL. Currently working with SQL
-              Server.
-            </p>
+            <p class="card-description">Familiar with both SQL and noSQL databases.</p>
             <p class="card-subtitle">Tools:</p>
             <p class="card-tools">Microsoft SQL Management Studio</p>
 
@@ -166,7 +163,7 @@
         </div>
       </section>
 
-      <section class="contact-section" id="contact">
+      <section class="contact-section" id="contact" style="position: relative">
         <div class="contact-myinfo">
           <div class="contact contact-adress">
             <div class="contact-title">
@@ -196,12 +193,12 @@
         <div class="contact-input">
           <form
             method="POST"
-            action="mailto:atif.delibasic@edu.fit.ba"
+            action="index.php"
             class="contact-form"
           >
             <h2>Send Me A Message</h2>
             <div class="form-item">
-              <label for="" class="label-tag">Full Name</label>
+              <label  class="label-tag">Full Name</label>
               <input
                 type="text"
                 name="fullname"
@@ -211,10 +208,10 @@
             </div>
 
             <div class="form-item">
-              <label for="" class="label-tag">Email</label>
+              <label class="label-tag">Email</label>
               <input
                 type="email"
-                name="_replyto"
+                name="email"
                 class="input-tag"
                 placeholder="Enter e-mail"
               />
@@ -233,11 +230,16 @@
             <div class="form-item">
               <input
                 type="submit"
+                name="submit"
                 value="SEND MESSAGE"
                 class="submit-btn btn"
               />
             </div>
           </form>
+        </div>
+        <a class="arrow" href="#home">
+          <i class="fas fa-chevron-up" style="color: #fff;"></i>
+          <p>Scroll to top</p>
         </div>
       </section>
     </div>
