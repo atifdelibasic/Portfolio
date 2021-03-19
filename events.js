@@ -44,3 +44,11 @@ imgAvatar.addEventListener("click", () => {
   let a = document.querySelector(".img-avatar");
   a.classList.toggle("avatar-2");
 });
+
+let slider = document.querySelector(".slider");
+slider.addEventListener("change", () => {
+  let value = slider.value;
+
+  document.getElementsByTagName("body")[0].style.backgroundColor = "rgb("+ value  +",1,1)";
+
+})
