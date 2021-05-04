@@ -7,11 +7,10 @@ const ToggleMenu = () => {
   let x = document.querySelector("#menuId");
   if (x.className === "menu") {
     x.className += " responsive";
-    hamburger.classList.add('open');
+    hamburger.classList.add("open");
   } else {
     x.className = "menu";
-    hamburger.classList.remove('open');
-
+    hamburger.classList.remove("open");
   }
 };
 
@@ -37,7 +36,6 @@ const setOpacity = () => {
 // add scroll event on header
 window.addEventListener("scroll", setOpacity);
 
-
 let imgAvatar = document.querySelector(".section-avatar");
 
 imgAvatar.addEventListener("click", () => {
@@ -45,10 +43,33 @@ imgAvatar.addEventListener("click", () => {
   a.classList.toggle("avatar-2");
 });
 
-let slider = document.querySelector(".slider");
-slider.addEventListener("change", () => {
-  let value = slider.value;
+// let slider = document.querySelector(".slider");
+// slider.addEventListener("change", () => {
+//   let value = slider.value;
 
-  document.getElementsByTagName("body")[0].style.backgroundColor = "rgb("+ value  +",1,1)";
+//   document.getElementsByTagName("body")[0].style.backgroundColor =
+//     "rgb(" + value + ",1,1)";
+// });
 
-})
+window.addEventListener("load", () => {
+});
+
+var myVideo = document.getElementById("video1");
+
+function playPause() {
+  console.log(myVideo);
+  if (myVideo.paused) myVideo.play();
+  else myVideo.pause();
+}
+
+function makeBig() {
+  myVideo.width = 560;
+}
+
+function makeSmall() {
+  myVideo.width = 320;
+}
+
+function makeNormal() {
+  myVideo.width = 420;
+}
